@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>श्रुती संगीत क्लासेस | शिवानंद स्वामी</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fffaf0;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #581414;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    rgba(80,10,10,0.75),
+                    rgba(130,60,0,0.75)
+                ),
+                url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .music-symbol {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            font-size: 27px;
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin: 12px 0;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 6px;
+            background: #ffd700;
+            color: #581414;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #701b1b;
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .about-box h3 {
+            color: #701b1b;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .qualification {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background: #f4d35e;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* EXAM */
+
+        .exam {
+            background: #fff0c9;
+        }
+
+        .exam-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .exam-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .exam-box h3 {
+            color: #701b1b;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .exam-box p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* COURSES */
+
+        .courses {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: 270px;
+            background: white;
+            padding: 28px 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #701b1b;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        /* PROGRAMS */
+
+        .programs {
+            background: #f5e4c3;
+        }
+
+        .program-box {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .program {
+            background: white;
+            width: 260px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .program h3 {
+            color: #701b1b;
+            margin-bottom: 10px;
+        }
+
+        /* TEACHER */
+
+        .teacher-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 35px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .teacher-box .guru {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .teacher-box h3 {
+            font-size: 28px;
+            color: #701b1b;
+            margin-bottom: 10px;
+        }
+
+        /* VISIT */
+
+        .visit {
+            background: #fff2d6;
+        }
+
+        .visit-box {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .visit-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .visit-box h3 {
+            color: #701b1b;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .visit-box p {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        /* YOUTUBE */
+
+        .youtube {
+            background: white;
+        }
+
+        .youtube-box {
+            max-width: 700px;
+            margin: auto;
+            background: #f8eeee;
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+        .youtube-box h3 {
+            color: #c00;
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #581414;
+            color: white;
+        }
+
+        .contact h2 {
+            color: #ffd700;
+        }
+
+        .contact-info {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 12px;
+        }
+
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #320b0b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 3px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero h3 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .card,
+            .program {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>
+        🎵 श्रुती संगीत क्लासेस
+    </h1>
+
+    <nav>
+
+        <a href="#home">मुख्यपृष्ठ</a>
+        <a href="#about">आमच्याबद्दल</a>
+        <a href="#courses">वर्ग</a>
+        <a href="#exam">परीक्षा</a>
+        <a href="#programs">कार्यक्रम</a>
+        <a href="#teacher">गुरुजी</a>
+        <a href="#visit">वर्गाला भेट द्या</a>
+        <a href="#youtube">YouTube</a>
+        <a href="#contact">संपर्क</a>
+
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <div class="music-symbol">
+            🎶 🎤 🎹 🥁 🎶
+        </div>
+
+        <h2>
+            श्रुती संगीत क्लासेस
+        </h2>
+
+        <h3>
+            श्री. शिवानंद स्वामी
+        </h3>
+
+        <p>
+            <b>संगीत अलंकार</b>
+        </p>
+
+        <p>
+            गायन • हार्मोनियम • तबला
+        </p>
+
+        <p>
+            शास्त्रीय संगीत • भजने
+        </p>
+
+        <p>
+            🎶 मैफिली • संगीत कार्यक्रम • भजन कार्यक्रम 🎶
+        </p>
+
+        <a href="#courses" class="btn">
+            🎵 आमचे वर्ग
+        </a>
+
+        <a href="tel:9822911743" class="btn">
+            📞 संपर्क करा
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <h2>🎵 आमच्याबद्दल</h2>
+
+    <div class="about-box">
+
+        <h3>
+            श्रुती संगीत क्लासेस
+        </h3>
+
+        <p>
+            श्रुती संगीत क्लासेसमध्ये
+            संगीताची आवड असणाऱ्या विद्यार्थ्यांना
+            योग्य मार्गदर्शन आणि प्रशिक्षण दिले जाते.
+        </p>
+
+        <p>
+            येथे गायन, हार्मोनियम, तबला,
+            शास्त्रीय संगीत आणि भजनांचे
+            प्रशिक्षण दिले जाते.
+        </p>
+
+        <p>
+            तसेच विविध संगीत कार्यक्रम,
+            मैफिली आणि भजन कार्यक्रमांमध्ये
+            संगीत सादरीकरण केले जाते.
+        </p>
+
+        <span class="qualification">
+            🎓 पात्रता : संगीत अलंकार
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXAM ================= -->
+
+<section class="exam" id="exam">
+
+    <h2>
+        📚 संगीत परीक्षा
+    </h2>
+
+    <div class="exam-box">
+
+        <div class="exam-icon">
+            🎓🎼
+        </div>
+
+        <h3>
+            अखिल भारतीय गांधर्व महाविद्यालय मंडळ
+        </h3>
+
+        <p>
+            विद्यार्थ्यांना अखिल भारतीय गांधर्व
+            महाविद्यालय मंडळाच्या परीक्षेस
+            बसता येईल.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COURSES ================= -->
+
+<section id="courses">
+
+    <h2>🎼 आमचे संगीत वर्ग</h2>
+
+    <div class="courses">
+
+        <div class="card">
+
+            <div class="icon">🎤</div>
+
+            <h3>गायन</h3>
+
+            <p>
+                गायनाचे योग्य प्रशिक्षण
+                आणि नियमित सरावाचे मार्गदर्शन.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎹</div>
+
+            <h3>हार्मोनियम</h3>
+
+            <p>
+                हार्मोनियम वादनाची मूलभूत
+                तसेच प्रगत माहिती.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🥁</div>
+
+            <h3>तबला</h3>
+
+            <p>
+                ताल, लय आणि तबला वादनाचे
+                प्रशिक्षण.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🎼</div>
+
+            <h3>शास्त्रीय संगीत</h3>
+
+            <p>
+                भारतीय शास्त्रीय संगीताचे
+                ज्ञान आणि प्रशिक्षण.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🙏</div>
+
+            <h3>भजने</h3>
+
+            <p>
+                भक्तिगीते आणि भजनांचे
+                गायन व संगीत प्रशिक्षण.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section class="programs" id="programs">
+
+    <h2>🎤🎶 कार्यक्रम व मैफिली</h2>
+
+    <div class="program-box">
+
+        <div class="program">
+
+            <div class="icon">🎤</div>
+
+            <h3>
+                संगीत मैफिली
+            </h3>
+
+            <p>
+                विविध संगीत मैफिलींमध्ये
+                गायन व वादनाचे सादरीकरण.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="icon">🎼</div>
+
+            <h3>
+                शास्त्रीय संगीत कार्यक्रम
+            </h3>
+
+            <p>
+                भारतीय शास्त्रीय संगीताचे
+                कार्यक्रम आणि सादरीकरण.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="icon">🙏</div>
+
+            <h3>
+                भजन कार्यक्रम
+            </h3>
+
+            <p>
+                विविध धार्मिक आणि सांस्कृतिक
+                कार्यक्रमांमध्ये भजन सादरीकरण.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="icon">🎵</div>
+
+            <h3>
+                सांस्कृतिक कार्यक्रम
+            </h3>
+
+            <p>
+                सांस्कृतिक कार्यक्रमांसाठी
+                संगीत व गायनाचे सादरीकरण.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEACHER ================= -->
+
+<section id="teacher">
+
+    <h2>👨‍🏫 आमचे गुरुजी</h2>
+
+    <div class="teacher-box">
+
+        <div class="guru">
+            🎼
+        </div>
+
+        <h3>
+            श्री. शिवानंद स्वामी
+        </h3>
+
+        <p>
+            <b>शैक्षणिक पात्रता : संगीत अलंकार</b>
+        </p>
+
+        <br>
+
+        <p>
+            संगीत शिक्षणासोबतच विविध मैफिली,
+            शास्त्रीय संगीत कार्यक्रम आणि
+            भजन कार्यक्रमांमध्ये संगीत सादरीकरण.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VISIT ================= -->
+
+<section class="visit" id="visit">
+
+    <h2>
+        🏫 आमचा वर्ग पाहण्यासाठी भेट द्या
+    </h2>
+
+    <div class="visit-box">
+
+        <div class="visit-icon">
+            🎵
+        </div>
+
+        <h3>
+            श्रुती संगीत क्लासेस
+        </h3>
+
+        <p>
+            आमचा संगीत वर्ग प्रत्यक्ष पाहण्यासाठी
+            आणि अधिक माहितीसाठी आम्हाला भेट द्या.
+        </p>
+
+        <p>
+
+            📍 <b>पत्ता:</b><br>
+
+            Shivsamarth Colony,<br>
+
+            Belheker Vasti,<br>
+
+            Manjari Budruk,<br>
+
+            Pune - 412307
+
+        </p>
+
+        <br>
+
+        <a
+            href="https://maps.app.goo.gl/eSxWvEXZ2FMD12hM8"
+            target="_blank"
+            class="btn">
+
+            📍 Google Maps वर Location पहा
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= YOUTUBE ================= -->
+
+<section class="youtube" id="youtube">
+
+    <h2>
+        ▶️ आमचे YouTube चॅनेल
+    </h2>
+
+    <div class="youtube-box">
+
+        <h3>
+            🎵 Shivanand Swami
+        </h3>
+
+        <p>
+            संगीत, गायन, मैफिली आणि कार्यक्रमांचे
+            व्हिडिओ पाहण्यासाठी आमच्या YouTube
+            चॅनेलला भेट द्या.
+        </p>
+
+        <br>
+
+        <a
+            href="https://www.youtube.com/@shivanandswami6709"
+            target="_blank"
+            class="btn">
+
+            ▶️ YouTube चॅनेल पहा
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h2>
+        📞 आमच्याशी संपर्क करा
+    </h2>
+
+    <div class="contact-info">
+
+        <p>
+            👨‍🏫 <b>गुरुजी:</b>
+            श्री. शिवानंद स्वामी
+        </p>
+
+        <p>
+            🎓 <b>पात्रता:</b>
+            संगीत अलंकार
+        </p>
+
+        <p>
+            📱 <b>मोबाईल 1:</b>
+
+            <a href="tel:9822911743">
+                9822911743
+            </a>
+        </p>
+
+        <p>
+            📱 <b>मोबाईल 2:</b>
+
+            <a href="tel:7414911743">
+                7414911743
+            </a>
+        </p>
+
+        <p>
+            📧 <b>Email:</b>
+
+            <a href="mailto:samarthswami5642@gmail.com">
+                samarthswami5642@gmail.com
+            </a>
+        </p>
+
+        <p>
+
+            📍 <b>पत्ता:</b><br>
+
+            Shivsamarth Colony,<br>
+
+            Belheker Vasti,<br>
+
+            Manjari Budruk,<br>
+
+            Pune - 412307
+
+        </p>
+
+        <br>
+
+        <a
+            href="tel:9822911743"
+            class="btn">
+
+            📞 Call 1
+
+        </a>
+
+        <a
+            href="tel:7414911743"
+            class="btn">
+
+            📞 Call 2
+
+        </a>
+
+        <a
+            href="https://wa.me/919822911743?text=नमस्कार,%20मला%20श्रुती%20संगीत%20क्लासेसबद्दल%20माहिती%20हवी%20आहे."
+            target="_blank"
+            class="btn">
+
+            💬 WhatsApp
+
+        </a>
+
+        <a
+            href="mailto:samarthswami5642@gmail.com"
+            class="btn">
+
+            📧 Email
+
+        </a>
+
+        <a
+            href="https://maps.app.goo.gl/eSxWvEXZ2FMD12hM8"
+            target="_blank"
+            class="btn">
+
+            📍 Location
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 श्रुती संगीत क्लासेस
+    </p>
+
+    <p>
+        श्री. शिवानंद स्वामी | संगीत अलंकार
+    </p>
+
+    <p>
+        🎶 संगीत हीच साधना 🎶
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
